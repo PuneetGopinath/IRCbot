@@ -1,0 +1,29 @@
+{
+    "name": "ircbot",
+    "version": "v1.0.0",
+    "description": "IRCbot is a community-developed, free and open source library for recording irc messages in Python 3. It is forked from https://github.com/Orderchaos/LinuxAcademy-IRC-Bot",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PuneetGopinath/IRCbot.git"
+    },
+    "author": "The IRCbot Authors (https://github.com/PuneetGopinath/IRCbot/graphs/contributors)",
+    "license": "LGPL-2.1",
+    "bugs": {
+        "url": "https://github.com/PuneetGopinath/IRCbot/issues"
+    },
+    "config": {
+        "version_short": "1.0"
+    },
+    "keywords": [
+        "python",
+        "python3",
+        "library",
+        "backend",
+        "irc",
+        "bot",
+        "irc-bot"
+    ],
+    "files": [
+        "*.py"
+    ]
+}
