@@ -102,8 +102,11 @@ def main():
         if message.find("Hi " + botnick) != -1:
           sendmsg("Hello " + name + "!")
           sendmsg("I am a bot created by PuneetGopinath, I record messages sent to a channel and save it to a file, bot can be started in their servers (or command line) and it will record messages. Credits to Linux Academy and PuneetGopinath.")
-        if message.find("How are you " + botnick + "?") != -1:
-          sendmsg("Sorry, I am unstable")
+        if message.find("Clear the file, " + botnick) != -1:
+          sendmsg("Ok")
+          irclog = open("ircchat.log", "w")
+          irclog.write("")
+          irclog.close()
         #Here we add in some code to help us get the bot to stop. Since we created an infinite loop, there is no normal ‘end’.
         #Instead, we’re going to check for some text and use that to end the function (which automatically ends the loop).
         #Look to see if the name of the person sending the message matches the admin name we defined earlier.

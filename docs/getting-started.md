@@ -22,6 +22,10 @@ Plz read [SUPPORT.md](https://github.com/PuneetGopinath/IRCbot/blob/main/.github
 
 Send `Stop botnick` in channel where botnick is the bots nick, or hit `CTRL + C` in command line
 
+## Clear the file
+
+Send `Clear the file, botnick` in channel where botnick is the bots nick, or delete the `ircchat.log` file.
+
 ---------------------------------------------------------------------
 
 [Back to home](README.md)
