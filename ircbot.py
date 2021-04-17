@@ -44,7 +44,6 @@ def joinchan(chan):
     print(ircmsg)
 #This function doesn’t need to take any arguments as the response will always be the same. Just respond with "PONG :pingis" to any PING.
 #Different servers have different requirements for responses to PING so you may need to adjust/update this depending on your server. I’ve used this particular example with Freenode and have never had any issues.
-# respond to server Pings.
 def ping():
   ircsock.send(bytes("PONG :pingis\n", "UTF-8"))
 #All we need for this function is to accept a variable with the message we’ll be sending and who we’re sending it to. We will assume we are sending to the channel by default if no target is defined.
@@ -102,8 +101,8 @@ def main():
         if message.find("Hi " + botnick) != -1:
           sendmsg("Hello " + name + "!")
           sendmsg("I am a bot created by PuneetGopinath, I record messages sent to a channel and save it to a file, bot can be started in their servers (or command line) and it will record messages. Credits to Linux Academy and PuneetGopinath.")
-        if name.lower() == adminnick.lower() and message.rstrip() == "Clear the file, " + botnick != -1:
-          sendmsg("Ok")
+        if name.lower() == adminnick.lower() and message.rstrip() == "Clear the file, " + botnick:
+          sendmsg("Ok, will clear the file.")
           irclog = open("ircchat.log", "w")
           irclog.write("")
           irclog.close()
