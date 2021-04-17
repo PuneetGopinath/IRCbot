@@ -1,5 +1,5 @@
 <div class="card">
-  <link rel="stylesheet" href="https://puneetgopinath.github.io/Sanitizers/css/main.css" />
+  <link rel="stylesheet" href="https://puneetgopinath.github.io/css/main.css" />
   <h2 align="center">IRC bot</h2>
   <a href="https://twitter.com/intent/tweet?text=This%20Python%20IRCbot%20Helped%20Me%20A%20Lot.%20Make%20Sure%20To%20Check%20It%20Out:\&url=https%3A%2F%2Fgithub.com%2FPuneetGopinath%2FIRCbot\&hashtags=py,backend,developer,opensource,python"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FPuneetGopinath%2FIRCbot" /></a>
   <a href="https://github.com/PuneetGopinath/IRCbot/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/PuneetGopinath/IRCbot?style=social"></a>
@@ -61,7 +61,7 @@ Please see [docs](docs/README.md) folder.
 Just run:
 
     python ircbot.py
-in the command line.
+in the command line. After [configuring IRCbot](docs/config.md)
 
 <h2><a name="status">Status</a></h2>
 
@@ -105,6 +105,7 @@ Plz see [SUPPORT.md](https://github.com/PuneetGopinath/IRCbot/blob/main/.github/
 
 <h2><a name="authors">Authors ✒️</a></h2>
 
+ * Linux Academy
  * Puneet Gopinath - [GitHub](https://github.com/PuneetGopinath) - [Email](mailto:baalkrshna@gmail.com) - [Donate at patreon](https://patreon.com/PuneetGopinath)
 
 See also the list of [contributors](https://github.com/PuneetGopinath/IRCbot/graphs/contributors) who participated in building this project.

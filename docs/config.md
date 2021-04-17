@@ -1,6 +1,6 @@
 <h2 align="center">IRCbot Docs - Configuring settings</h2>
 
-<link rel="stylesheet" href="https://puneetgopinath.github.io/Sanitizers/css/main.css" />
+<link rel="stylesheet" href="https://puneetgopinath.github.io/css/main.css" />
 
 To Configure IRCbot read this guide.
 

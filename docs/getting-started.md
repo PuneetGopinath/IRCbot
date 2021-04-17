@@ -1,6 +1,6 @@
 <h2 align="center">IRCbot Docs - Getting Started</h2>
 
-<link rel="stylesheet" href="https://puneetgopinath.github.io/Sanitizers/css/main.css" />
+<link rel="stylesheet" href="https://puneetgopinath.github.io/css/main.css" />
 
 Get started with IRCbot, the library for logging messages sent to specific irc channel in Python 3.
 

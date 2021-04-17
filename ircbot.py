@@ -102,7 +102,7 @@ def main():
         if message.find("Hi " + botnick) != -1:
           sendmsg("Hello " + name + "!")
           sendmsg("I am a bot created by PuneetGopinath, I record messages sent to a channel and save it to a file, bot can be started in their servers (or command line) and it will record messages. Credits to Linux Academy and PuneetGopinath.")
-        if message.find("Clear the file, " + botnick) != -1:
+        if name.lower() == adminnick.lower() and message.rstrip() == "Clear the file, " + botnick != -1:
           sendmsg("Ok")
           irclog = open("ircchat.log", "w")
           irclog.write("")

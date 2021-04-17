@@ -1,6 +1,6 @@
 <h2 align="center">IRCbot Docs - FAQ</h2>
 
-<link rel="stylesheet" href="https://puneetgopinath.github.io/Sanitizers/css/main.css" />
+<link rel="stylesheet" href="https://puneetgopinath.github.io/css/main.css" />
 
 To know the frequently asked questions to IRCbot read this file.
 
