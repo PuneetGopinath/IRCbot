@@ -1,4 +1,4 @@
-# IRCbot ChangeLog 1.0
+# IRCbot ChangeLog 0.1
 
 All notable changes to IRCbot library will be added to this file.
 
@@ -8,10 +8,10 @@ All notable changes to IRCbot library will be added to this file.
 
 Format is `version (*dd-mm-yyyy*)`
 
-### v1.0.0 (*unreleased*)
+### v0.1.0 (*unreleased*)
 
 #### Info
- * 🎉 Initial release of IRCbot!
+ * 🎉 Initial development release of IRCbot!
 
 <h2><a name="older-changelogs">Older ChangeLogs</a></h2>
 
