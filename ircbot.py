@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Copyright (c) 2021 Puneet Gopinath
+# Copyright (c) 2016-2021 Linux Academy, Puneet Gopinath
 # license   https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html GNU Lesser General Public License v2.1
 # credits to Linux Academy, forked from https://github.com/Orderchaos/LinuxAcademy-IRC-Bot
 # note      This program is distributed in the hope that it will be useful - WITHOUT
