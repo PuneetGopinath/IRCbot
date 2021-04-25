@@ -12,10 +12,6 @@
 *.tmp
 *.old
 
-## Composer
-composer.phar
-/vendor/
-
 ## GPG
 secring.*
 

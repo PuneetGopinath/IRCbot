@@ -20,11 +20,11 @@ Plz read [SUPPORT.md](https://github.com/PuneetGopinath/IRCbot/blob/main/.github
 
 ## Stop IRCbot
 
-Send `Stop botnick` in channel where botnick is the bots nick, or hit `CTRL + C` in command line
+Send `Stop botnick` where botnick is the bot's nick, or hit `CTRL + C` in command line. Note: It should be sent from the person having the adminnick defined in configuration.
 
 ## Clear the file
 
-Send `Clear the file, botnick` in channel where botnick is the bots nick, or delete the `ircchat.log` file.
+Send `Clear the file, botnick` where botnick is the bot's nick, or delete the `ircchat.log` file. Note: It should be sent from the person having the adminnick defined in configuration.
 
 ---------------------------------------------------------------------
 
