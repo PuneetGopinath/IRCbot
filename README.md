@@ -16,6 +16,8 @@
   </p><br><br>
 </div>
 
+[![Join the chat at https://gitter.im/BaalKrshna/IRCbot](https://badges.gitter.im/BaalKrshna/IRCbot.svg)](https://gitter.im/BaalKrshna/IRCbot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ---------------------------------------------------------------------
 
 <details open="true">
@@ -66,6 +68,7 @@ in the command line. After [configuring IRCbot](docs/config.md)
 <h2><a name="status">Status</a></h2>
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](.github/CODE_OF_CONDUCT.md)
+[![Join the chat at https://gitter.im/BaalKrshna/IRCbot](https://badges.gitter.im/BaalKrshna/IRCbot.svg)](https://gitter.im/BaalKrshna/IRCbot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 #### GitHub
 
