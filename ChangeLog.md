@@ -8,7 +8,7 @@ All notable changes to IRCbot library will be added to this file.
 
 Format is `version (*dd-mm-yyyy*)`
 
-### v0.1.0 (*unreleased*)
+### v0.1.0 (*27-04-2021*)
 
 #### Info
  * 🎉 Initial development release of IRCbot!
