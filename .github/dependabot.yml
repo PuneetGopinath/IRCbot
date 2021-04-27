@@ -21,18 +21,6 @@ updates:
     reviewers:
       - PuneetGopinath
 
-  - package-ecosystem: "composer"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-      time: "12:00"
-      timezone: "Asia/Kolkata"
-    labels:
-      - "composer"
-      - "dependencies"
-    pull-request-branch-name:
-      separator: "-"
     commit-message:
       prefix: "Composer"
       include: "scope"
