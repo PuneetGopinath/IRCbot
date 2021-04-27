@@ -148,7 +148,7 @@ Help spread awareness about IRCbot by:
 
  * Pinterest: [![Share at Pinterest](https://img.shields.io/badge/Share-Pinterest-%23c8232c?style=flat-square)](https://pinterest.com/pin/create/button/?media=\&description=This%20Python%20IRCbot%20Helped%20Me%20A%20Lot.%20Make%20Sure%20To%20Check%20It%20Out:\&url=https://github.com/PuneetGopinath/IRCbot)
 
- * Email: [![Share at Email](https://img.shields.io/badge/Share-Email-green?style=flat-square)](mailto:baalkrshna@gmail.com?\&subject=See%20this%20Awesome%20Python%20IRCbot\&cc=\&bcc=\&body=This%20Python%20IRCbot%20Helped%20Me%20A%20Lot.%20Make%20Sure%20To%20Check%20It%20Out:%0Ahttps://github.com/PuneetGopinath/IRCbot)
+ * Email: [![Share at Email](https://img.shields.io/badge/Share-Email-green?style=flat-square)](mailto:baalkrshna@gmail.com?\&subject=See%20this%20Awesome%20Python%20IRCbot\&cc=\&bcc=\&body=This%20Python%20IRCbot%20Helped%20Me%20A%20Lot.%20Make%20Sure%20To%20Check%20It%20Out:%0Ahttps://github.com/PuneetGopinath/IRCbot) [![Join the chat at https://gitter.im/BaalKrshna/IRCbot](https://badges.gitter.im/BaalKrshna/IRCbot.svg)](https://gitter.im/BaalKrshna/IRCbot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <h2><a name="versioning">Versioning</a></h2>
 
