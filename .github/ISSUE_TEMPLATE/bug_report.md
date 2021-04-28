@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a bug report to help us improve
-title: 'Bug report - Your title here'
+title: Bug report - Your title here
 labels: bug
 assignees: ''
 
@@ -17,13 +17,6 @@ Please check these things before submitting your issue:
 
 **Description**
 A clear and concise description of what the bug is.
-
-**System Information**
-1. OS: [e.g. Windows 10, Linux, macOS 10.12, Android 10, iOS 7]
-2. Browser [e.g. Chrome, Firefox, Safari, Microsoft Edge, Opera, Internet Explorer, Android Browser]
-3. Browser Version [Note: Try to get Full Version, like 22.14.3.5]
-4. Platform [e.g. Desktop, Smartphone, Tablet]
-5. Device [e.g. iPhone 6 or Samsung Galaxy S21]
 
 <!--**Screenshots (optional)**
 If applicable, add screenshots to help explain your problem.
