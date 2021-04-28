@@ -6,7 +6,7 @@
   <blockquote><b>Quickly record irc messages</b></blockquote>
 
   <p align="center">
-    <b>IRCbot is a community-developed, free and open source library for recording irc messages in Python 3. It is forked from https://github.com/Orderchaos/LinuxAcademy-IRC-Bot</b><br><br>
+    <b>IRCbot is a community-developed, free and open source library for recording irc messages in Python 3. It is a fork of https://github.com/Orderchaos/LinuxAcademy-IRC-Bot</b><br><br>
     <br><br>
     Latest release: <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/PuneetGopinath/IRCbot"><br>
     <br><br>Explore:<br>

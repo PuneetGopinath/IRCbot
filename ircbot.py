@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
-# Copyright (c) 2016-2021 Linux Academy, Puneet Gopinath
+# Copyright (c) 2016 Linux Academy
+# Copyright (c) 2021 Puneet Gopinath
 # license   https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html GNU Lesser General Public License v2.1
-# credits to Linux Academy, forked from https://github.com/Orderchaos/LinuxAcademy-IRC-Bot
+# credits to Linux Academy, this project is a fork of https://github.com/Orderchaos/LinuxAcademy-IRC-Bot
 # note      This program is distributed in the hope that it will be useful - WITHOUT
 #           ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
 #           FITNESS FOR A PARTICULAR PURPOSE.
 
 import socket
-#This first variable is the socket we’ll be using to connect and communicate with the IRC server. Sockets are complicated and can be used for many tasks in many ways.
-#See here if you’d like more information on sockets: https://docs.python.org/3/howto/sockets.html.
+
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 server = "chat.freenode.net" # Server
@@ -20,8 +20,6 @@ password = "" #Your IRC bot's password
 exitcode = "Stop " + botnick #The content of message we will use to stop the bot if sent by admin
 filename = "ircchat.log" #Filename in which messages will be stored
 
-#To connect to IRC we need to use our socket variable (ircsock) and connect to the server.
-#We need to have the server name (established in our Global Variables) and the port number inside parentheses so it gets passed as a single item to the connection.
 ircsock.connect((server, 6667)) # Here we connect to the server using the port 6667
 #Once we’ve established the connection we need to send some information to the server to let the server know who we are.
 # USER <username> <hostname> <servername> :<realname>
@@ -45,13 +43,11 @@ def joinchan(chan):
 def ping():
   ircsock.send(bytes("PONG :pingis\n", "UTF-8"))
 #All we need for this function is to accept a variable with the message we’ll be sending and who we’re sending it to. We will assume we are sending to the channel by default if no target is defined.
-#Using target=channel in the parameters section says if the function is called without a target defined, example below in the Main Function section, then assume the target is the channel.
 # sends messages to the target (by default channel).
 def sendmsg(msg, target=channel):
   #With this we are sending a ‘PRIVMSG’ to the channel. The " :" lets the server separate the target and the message.
   ircsock.send(bytes("PRIVMSG " + target + " :" + msg + "\n", "UTF-8"))
 def logger(name, msg):
-  # loop through the content of the chat log and reduce to 100 lines, starting with oldest. --Definitely a better way to do this, needs improvement.
   irclog = open(filename, "r")
   content = irclog.readlines()
   irclog.close()
@@ -100,13 +96,12 @@ def main():
           irclog = open(filename, "w")
           irclog.write("")
           irclog.close()
-        #Here we add in some code to help us get the bot to stop. Since we created an infinite loop, there is no normal ‘end’.
-        #Instead, we’re going to check for some text and use that to end the function (which automatically ends the loop).
+        #Here we add in some code to help us get the bot to stop. Since we created an infinite loop.
         #Look to see if the name of the person sending the message matches the admin name we defined earlier. We make both lower case in case the admin typed their name a little differently when joining.
         #We also make sure the message matches the exit code above. The exit code and the message must be EXACTLY the same. This way the admin can still type the exit code with extra text to explain it or talk about it to other users and it won’t cause the bot to quit.
         #The only adjustment we're making is to trim off any whitespace at the end of the message. So if the message matches, but has an extra space at the end, it will still work.
         if name.lower() == adminnick.lower() and message.rstrip() == exitcode:
-          #If we do get sent the exit code, then send a message (no target defined, so to the channel) saying we’ll do it, but making clear we’re sad to leave.
+          #If we do get sent the exit code, then send a message (no target defined, so to the channel) saying we’ll do it.
           sendmsg("Okay. I will stop.")
           #Send the quit command to the IRC server so it knows we’re disconnecting.
           ircsock.send(bytes("QUIT \n", "UTF-8"))
