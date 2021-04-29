@@ -1,13 +1,14 @@
 <div class="card">
   <link rel="stylesheet" href="https://puneetgopinath.github.io/css/main.css" />
-  <h2 align="center">IRC bot</h2>
+  <h2 align="center">IRC bot (BRT)</h2>
   <a href="https://twitter.com/intent/tweet?text=This%20Python%20IRCbot%20Helped%20Me%20A%20Lot.%20Make%20Sure%20To%20Check%20It%20Out:\&url=https%3A%2F%2Fgithub.com%2FPuneetGopinath%2FIRCbot\&hashtags=py,backend,developer,opensource,python"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FPuneetGopinath%2FIRCbot" /></a>
   <a href="https://github.com/PuneetGopinath/IRCbot/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/PuneetGopinath/IRCbot?style=social"></a>
   <blockquote><b>Quickly record irc messages</b></blockquote>
 
   <p align="center">
     <b>IRCbot is a community-developed, free and open source library for recording irc messages in Python 3. It is a fork of https://github.com/Orderchaos/LinuxAcademy-IRC-Bot</b><br><br>
-    <br><br>
+    It has a abbreviation BRT, full form is <b>B</b>aalKrshna I<b>R</b>C bo<b>t</b>.
+    <br><br><br><br>
     Latest release: <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/PuneetGopinath/IRCbot"><br>
     <br><br>Explore:<br>
     <a href="https://github.com/PuneetGopinath/IRCbot/blob/main/docs"><b>IRCbot Docs</b></a> &raquo;<br>
