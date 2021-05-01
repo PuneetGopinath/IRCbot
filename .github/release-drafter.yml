@@ -1,4 +1,4 @@
-name-template: "v$RESOLVED_VERSION"
+name-template: "IRCbot v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
 prerelease: false
 publish: false
@@ -29,7 +29,7 @@ categories:
   - title: "🔧 Language Translations"
     labels:
       - "translations"
-change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-template: "- $TITLE (#$NUMBER) Thanks to @$AUTHOR"
 version-resolver:
   major:
     labels:

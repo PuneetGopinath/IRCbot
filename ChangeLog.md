@@ -8,6 +8,26 @@ All notable changes to IRCbot library will be added to this file.
 
 Format is `version (*dd-mm-yyyy*)`
 
+### v0.1.1 (*unreleased*)
+
+#### Info
+ * 🐛 Bug fix release
+
+### Bug fixes
+ * No bug fixes
+
+#### Changes
+ * Move `ircbot.py` to `src/ircbot.py`
+
+#### Additions
+ * Publish this project as package in pip
+
+#### Deletions
+ * Remove `package.json`
+
+#### Docs
+ * Update issue templates
+
 ### v0.1.0 (*27-04-2021*)
 
 #### Info
