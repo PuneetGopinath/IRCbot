@@ -14,7 +14,7 @@ Installation guide can be read in [INSTALL.md](https://github.com/PuneetGopinath
 
 ## Start IRCbot
 
-Run `python ircbot.py`
+Run `python src/ircbot.py`
 
 Plz read [SUPPORT.md](https://github.com/PuneetGopinath/IRCbot/blob/main/.github/SUPPORT.md) if you want to ask questions or clarify doubts.
 

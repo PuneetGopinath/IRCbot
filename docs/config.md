@@ -14,7 +14,7 @@ Default `chat.freenode.net`. The server to connect.
 
 The nick name to the bot. This should be registered.
 
-See here for more information on Nickname registration: https://en.wikipedia.org/wiki/Wikipedia:IRC/Tutorial#Nickname_registration
+See [here](https://en.wikipedia.org/wiki/Wikipedia:IRC/Tutorial#Nickname_registration) for more information on Nickname registration
 
 ## 3. adminnick
 
@@ -22,7 +22,7 @@ Your irc nick.
 
 ## 4. password
 
-The password of the bots nick.
+The password of the bot's nick.
 
 ## 5. exitcode
 
@@ -30,7 +30,9 @@ The message to send for the bot to stop.
 
 By default if you send "Stop botnick" (no quotes), where botnick is nick specified in config setting 2.
 
-You have to edit these after opening ircbot.py
+---------------------------------------------------------------------
+
+You have to edit these config settings after opening `src/ircbot.py`
 
 ---------------------------------------------------------------------
 
