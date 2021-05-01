@@ -8,7 +8,8 @@
 #           ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
 #           FITNESS FOR A PARTICULAR PURPOSE.
 
-import socket
+# import socket for ircsock, os for file handling
+import socket, os
 
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
