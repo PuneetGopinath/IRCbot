@@ -63,7 +63,7 @@ Please see [docs](docs/README.md) folder.
 
 Just run:
 
-    python ircbot.py
+    python src/ircbot.py
 in the command line. After [configuring IRCbot](docs/config.md)
 
 <h2><a name="status">Status</a></h2>
@@ -86,7 +86,9 @@ in the command line. After [configuring IRCbot](docs/config.md)
 
 ```text
 IRCbot/
-└── ircbot.py
+└── src/
+    └── __init__.py
+    └── ircbot.py
 ```
 
 <h2><a name="prerequisites">Prerequisites 📋</a></h2>
@@ -95,7 +97,7 @@ See Prerequisites section [in INSTALL.md](INSTALL.md#prerequisites).
 
 <h2><a name="tests">Tests ⚙️</a></h2>
 
-Run `python ircbot.py`
+Run `python src/ircbot.py`
 
 <h2><a name="contributing">Contributing</a></h2>
 

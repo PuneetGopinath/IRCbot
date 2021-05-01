@@ -20,4 +20,3 @@ To install IRCbot, you need:
 > [Download source code from releases page](https://github.com/PuneetGopinath/IRCbot/releases/)
 > Extract files to your project's folder
 
-2. Now you can start the bot by running `python ircbot.py` in the command line !!
