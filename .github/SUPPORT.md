@@ -6,5 +6,5 @@ See the [CONTRIBUTING.md](CONTRIBUTING.md) file for info about bug reports and f
 
 For asking questions and clarifing doubts or chatting with the BKS maintainers and community members:
 
-- Chat in IRC. On the `irc.freenode.net` server, in the `##py3ircbot` channel.
+- Chat in IRC. On the `irc.freenode.net` server, in the `##bkircbot` channel, the old `##py3ircbot` channel is no longer used.
 - Email us at [baalkrshna@gmail.com](mailto:baalkrshna@gmail.com?\&subject=I%20want%20help%20from%20IRCbot%20maintainers\&cc=puneet2007@icloud.com\&bcc=\&body=Hi%20IRCbot%20maintainers!)

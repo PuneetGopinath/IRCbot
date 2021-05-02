@@ -73,7 +73,7 @@ def logger(name, msg):
 def main():
   # start by joining the channel(s) we defined.
   for x in channel:
-    joinchan(channel[x])
+    joinchan(x)
   #Start infinite loop to continually check for and receive new info from server. This ensures our connection stays open.
   #An infinite while loop works better in this case.
   while 1:
@@ -87,20 +87,19 @@ def main():
     #Here we check if the information we received was a PRIVMSG. PRIVMSG is how standard messages in the channel (and direct messages to the bot) will come in.
     #Most of the processing of messages will be in this section.
     if ircmsg.find("PRIVMSG") != -1:
-      #First we want to get the nick of the person who sent the message. Messages come in from from IRC in the format of ":[Nick]!~[hostname]@[IP Address] PRIVMSG [channel] :[message]”
-      #We need to split and parse it to analyze each part individually.
+      #Messages come from IRC in the format of ":[Nick]!~[hostname]@[IP Address] PRIVMSG [channel] :[message]”
       name = ircmsg.split("!",1)[0][1:]
-      #Here we split out the message.
+      #Split out the message.
       message = ircmsg.split("PRIVMSG",1)[1].split(" :",1)[1]
-      #Here we split out the sentTo (to understand whether it was sent to channel or sent to botnick privately).
+      #Split out the sentTo (to understand whether it was sent to channel or sent to botnick privately).
       sentTo = ircmsg.split("PRIVMSG",1)[1].split(" :",1)[0]
       #Log the message
-      logger(name, "(sentTo: " + sentTo + ") :" + message)
+      logger(name, "(Sent To: " + sentTo + ") :" + message)
       #Now that we have the name information, we check if the name is less than 17 characters. Nicks (at least for Freenode) are limited to 16 characters.
       if len(name) < 17:
         if message.find("Hi " + botnick) != -1 or message.find("Who is " + botnick) != -1:
           sendmsg("Hello " + name + "!")
-          sendmsg("I am a bot created by PuneetGopinath, I record messages sent to a channel and save it to a file, bot can be started in their servers (or command line) and it will record messages. Credits to Linux Academy and PuneetGopinath.")
+          sendmsg("I am a bot created by PuneetGopinath initialy developed by Linux Academy. Credits to Linux Academy and PuneetGopinath. Please report any issues at https://github.com/PuneetGopinath/IRCbot/issues")
         if name.lower() == adminnick.lower() and message.rstrip() == "Clear the file, " + botnick:
           sendmsg("Ok, will clear the file.")
           irclog = open(filename, "w")
