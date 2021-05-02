@@ -10,25 +10,36 @@ The list of all settings are below:
 
 Default `chat.freenode.net`. The server to connect.
 
-## 2. botnick
+## 2. channel
 
-The nick name to the bot. This should be registered.
+The channels to join, it's an array of channel name with `#` to join for recording IRC messages.
+
+Example:
+```py
+channel = ["#chan", "#chan2"]
+```
+
+## 3. botnick
+
+The nick name to the bot. This should be registered to the server defined above.
+You can just connect to your IRC server with a client and then send `/nick yournick` where yournick is your nickname.
+And then send `/msg NickServ register youremail password`
 
 See [here](https://en.wikipedia.org/wiki/Wikipedia:IRC/Tutorial#Nickname_registration) for more information on Nickname registration
 
-## 3. adminnick
+## 4. adminnick
 
 Your irc nick.
 
-## 4. password
+## 5. password
 
 The password of the bot's nick.
 
-## 5. exitcode
+## 6. exitcode
 
 The message to send for the bot to stop.
 
-By default if you send "Stop botnick" (no quotes), where botnick is nick specified in config setting 2.
+By default if you send `Stop botnick`, where botnick is nick specified in config setting 2.
 
 ---------------------------------------------------------------------
 

@@ -13,20 +13,24 @@ import socket, os
 
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-server = "chat.freenode.net" # Server
-channel = "#chan" # Channel
-botnick = "puneetBot" # Your bot's nick.
-adminnick = "puneetgopi" #Your IRC nickname.
-password = "" #Your IRC bot's password
-exitcode = "Stop " + botnick #The content of message we will use to stop the bot if sent by admin
-filename = "ircchat.log" #Filename in which messages will be stored
+server = "chat.freenode.net" # Server to connect.
+channel = ["#chan"] # Array of channels to join.
+botnick = "" #Your bot's nickname.
+adminnick = "" #Your IRC nickname.
+password = "" #Your IRC bot's password.
+exitcode = "Stop " + botnick #The content of message we will use to stop the bot if sent by admin.
+filename = "ircchat.log" #Filename in which messages will be logged.
+
+if adminnick == "" or botnick == "":
+  print("Note: adminnick or botnick is empty!")
 
 ircsock.connect((server, 6667)) # Here we connect to the server using the port 6667
-#Once we’ve established the connection we need to send some information to the server to let the server know who we are.
+#We need to send some info to the server to let the server identify us.
 # USER <username> <hostname> <servername> :<realname>
 ircsock.send(bytes("USER " + botnick + " " + botnick + " " + botnick + " :IRCbot by Linux Academy and Puneet Gopinath.\n", "UTF-8")) # user information
 ircsock.send(bytes("NICK " + botnick + "\n", "UTF-8")) # assign the nick to the bot
-ircsock.send(bytes("NickServ identify " + password + "\n", "UTF-8")) # identify the nick
+ircsock.send(bytes("NickServ identify " + password + "\n", "UTF-8")) # login to the botnick's IRC account
+
 def joinchan(chan):
 
   #The ‘bytes’ part and "UTF-8” says to send the message to IRC as UTF-8 encoded bytes. In Python 2 this isn’t necessary, but changes to string encoding in Python 3 makes this a requirement here.
@@ -41,13 +45,16 @@ def joinchan(chan):
     ircmsg = ircsock.recv(2048).decode("UTF-8")
     ircmsg = ircmsg.strip("\n\r")
     print(ircmsg)
+
 def ping():
   ircsock.send(bytes("PONG :pingis\n", "UTF-8"))
+
 #All we need for this function is to accept a variable with the message we’ll be sending and who we’re sending it to. We will assume we are sending to the channel by default if no target is defined.
 # sends messages to the target (by default channel).
 def sendmsg(msg, target=channel):
   #With this we are sending a ‘PRIVMSG’ to the channel. The " :" lets the server separate the target and the message.
   ircsock.send(bytes("PRIVMSG " + target + " :" + msg + "\n", "UTF-8"))
+
 def logger(name, msg):
   irclog = open(filename, "r")
   content = irclog.readlines()
@@ -62,9 +69,11 @@ def logger(name, msg):
   # write newest messge to log.
   irclog.write(name + ":" + msg.strip("\n\r") + "\n")
   irclog.close()
+
 def main():
-  # start by joining the channel we defined in the Global Variables section.
-  joinchan(channel)
+  # start by joining the channel(s) we defined.
+  for x in channel:
+    joinchan(channel[x])
   #Start infinite loop to continually check for and receive new info from server. This ensures our connection stays open.
   #An infinite while loop works better in this case.
   while 1:

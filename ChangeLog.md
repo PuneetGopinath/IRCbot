@@ -1,4 +1,4 @@
-# IRCbot ChangeLog 0.1
+# IRCbot ChangeLog 0.2
 
 All notable changes to IRCbot library will be added to this file.
 
@@ -8,10 +8,10 @@ All notable changes to IRCbot library will be added to this file.
 
 Format is `version (*dd-mm-yyyy*)`
 
-### v0.1.1 (*unreleased*)
+### v0.2.0 (*unreleased*)
 
 #### Info
- * 🐛 Bug fix release
+ * 🚀 Feature update release
 
 ### Bug fixes
  * No bug fixes
@@ -21,18 +21,15 @@ Format is `version (*dd-mm-yyyy*)`
 
 #### Additions
  * Publish this project as package in pip
+ * New feature: join more than one channel, see [#4](https://github.com/PuneetGopinath/IRCbot/issues/4)
 
 #### Deletions
  * Remove `package.json`
 
 #### Docs
  * Update issue templates
-
-### v0.1.0 (*27-04-2021*)
-
-#### Info
- * 🎉 Initial development release of IRCbot!
+ * Add channel as a config settings in `docs/config.md`
 
 <h2><a name="older-changelogs">Older ChangeLogs</a></h2>
 
- * No older ChangeLogs
+ * [0.1](https://github.com/PuneetGopinath/IRCbot/blob/0.1.0/ChangeLog.md)
