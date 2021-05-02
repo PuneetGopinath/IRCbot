@@ -85,6 +85,7 @@ setup(
     # For a list of valid classifiers, see https://pypi.org/classifiers/
     classifiers=[  # Optional
         # How mature is this project? Common values are
+        #   2 - Pre-Alpha
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
