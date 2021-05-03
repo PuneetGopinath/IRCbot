@@ -11,6 +11,7 @@
 # import socket for ircsock, os for file handling
 import socket, os
 
+# Create a socket
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 server = "chat.freenode.net" # Server to connect.
@@ -49,9 +50,9 @@ def joinchan(chan):
 def ping():
   ircsock.send(bytes("PONG :pingis\n", "UTF-8"))
 
-#All we need for this function is to accept a variable with the message we’ll be sending and who we’re sending it to. We will assume we are sending to the channel by default if no target is defined.
-# sends messages to the target (by default channel).
-def sendmsg(msg, target=channel):
+#All we need for this function is to accept a variable with the message we’ll be sending and who we’re sending it to.
+# sends messages to the target
+def sendmsg(msg, target):
   #With this we are sending a ‘PRIVMSG’ to the channel. The " :" lets the server separate the target and the message.
   ircsock.send(bytes("PRIVMSG " + target + " :" + msg + "\n", "UTF-8"))
 
@@ -72,8 +73,10 @@ def logger(name, msg):
 
 def main():
   # start by joining the channel(s) we defined.
+  chan = ""
   for x in channel:
-    joinchan(x)
+    chan += x + ","
+  joinchan(chan)
   #Start infinite loop to continually check for and receive new info from server. This ensures our connection stays open.
   #An infinite while loop works better in this case.
   while 1:
@@ -92,26 +95,26 @@ def main():
       #Split out the message.
       message = ircmsg.split("PRIVMSG",1)[1].split(" :",1)[1]
       #Split out the sentTo (to understand whether it was sent to channel or sent to botnick privately).
-      sentTo = ircmsg.split("PRIVMSG",1)[1].split(" :",1)[0]
+      sentTo = ircmsg.split("PRIVMSG",1)[1].split(" :",1)[0].rstrip()
       #Log the message
       logger(name, "(Sent To: " + sentTo + ") :" + message)
       #Now that we have the name information, we check if the name is less than 17 characters. Nicks (at least for Freenode) are limited to 16 characters.
       if len(name) < 17:
         if message.find("Hi " + botnick) != -1 or message.find("Who is " + botnick) != -1:
-          sendmsg("Hello " + name + "!")
-          sendmsg("I am a bot created by PuneetGopinath initialy developed by Linux Academy. Credits to Linux Academy and PuneetGopinath. Please report any issues at https://github.com/PuneetGopinath/IRCbot/issues")
+          sendmsg("Hello " + name + "!", sentTo)
+          sendmsg("I am a bot created by PuneetGopinath initialy developed by Linux Academy. Credits to Linux Academy and PuneetGopinath. Please report any issues at https://github.com/PuneetGopinath/IRCbot/issues", sentTo)
         if name.lower() == adminnick.lower() and message.rstrip() == "Clear the file, " + botnick:
-          sendmsg("Ok, will clear the file.")
+          sendmsg("Ok, will clear the file.", sentTo)
           irclog = open(filename, "w")
           irclog.write("")
           irclog.close()
         #Here we add in some code to help us get the bot to stop. Since we created an infinite loop.
-        #Look to see if the name of the person sending the message matches the admin name we defined earlier. We make both lower case in case the admin typed their name a little differently when joining.
-        #We also make sure the message matches the exit code above. The exit code and the message must be EXACTLY the same. This way the admin can still type the exit code with extra text to explain it or talk about it to other users and it won’t cause the bot to quit.
-        #The only adjustment we're making is to trim off any whitespace at the end of the message. So if the message matches, but has an extra space at the end, it will still work.
+        #Check whether the name of the person sending the message matches the admin name we defined earlier. We make both lower case in case the admin typed their name a little differently when joining.
+        #We make sure the message matches the exit code above. The exit code and the message must be EXACTLY the same. This way the admin can still type the exit code with extra text to explain it or talk about it to other users and it won’t cause the bot to quit.
+        #The only adjustment we're making is to trim off any whitespace at the right side of the message.
         if name.lower() == adminnick.lower() and message.rstrip() == exitcode:
-          #If we do get sent the exit code, then send a message (no target defined, so to the channel) saying we’ll do it.
-          sendmsg("Okay. I will stop.")
+          #If we do get sent the exit code, then send a message (target is from were we received) saying we’ll do it.
+          sendmsg("Okay. Bye... 😭", sentTo)
           #Send the quit command to the IRC server so it knows we’re disconnecting.
           ircsock.send(bytes("QUIT \n", "UTF-8"))
           #The return command returns to when the function was called (we haven’t gotten there yet, see below) and continues with the rest of the script.
@@ -119,8 +122,8 @@ def main():
           return
     #If the message is not a PRIVMSG it still might need some response.
     else:
-      #Check if the information we received was a PING request. If so, we call the ping() function we defined earlier so we respond with a PONG.
+      #Check if the info we received was a PING request. If yes, we call the ping() function we defined earlier so we respond with a PONG to the server.
       if ircmsg.find("PING :") != -1:
         ping()
-#Finally, now that the main function is defined, we need to start it.
+#The main function is defined, we need to start it.
 main()
