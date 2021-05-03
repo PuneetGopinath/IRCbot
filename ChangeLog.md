@@ -21,7 +21,7 @@ Format is `version (*dd-mm-yyyy*)`
  * New irc channel `##bkircbot` instead of `##py3ircbot`
 
 #### Additions
- * Publish this project as package in pip
+ * Publish this project as package in pip with name `bkircbot`
  * New feature: join more than one channel, see [#4](https://github.com/PuneetGopinath/IRCbot/issues/4)
  * Add CodeQL analysis
 
