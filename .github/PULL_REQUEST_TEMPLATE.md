@@ -1,11 +1,11 @@
 Thank you for contributing! Please check the following things before submiting your PR:
 
 Required:
-- [ ] I have read and followed the [contributing guidelines](https://github.com/PuneetGopinath/Sanitizers/blob/main/.github/CONTRIBUTING.md)
+- [ ] I have read and followed the [contributing guidelines](https://github.com/PuneetGopinath/IRCbot/blob/main/.github/CONTRIBUTING.md)
 
 If necessary:
 - [ ] I have updated the README and documentation.
-- [ ] I have updated the ChangeLog with the changes I have made.
+- [ ] I have updated the [ChangeLog](https://github.com/PuneetGopinath/IRCbot/blob/main/ChangeLog.md) with the changes I have made.
 
 > Replace this line with a short description about the changes you have made in this PR e.g. Corrected spelling mistakes in docs
 

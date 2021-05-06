@@ -8,7 +8,7 @@ newIssueWelcomeComment: >
 
 # Comment to be posted to on PRs from first time contributors in your repository
 newPRWelcomeComment: > 
-  Thanks for opening this pull request! Make sure you have read the contributing guidelines, assigned an respective issue to this PR 😇
+  Thanks for opening this pull request! Make sure you have read the contributing guidelines, assigned an respective issue (if applicable) to this PR 😇
 
 # Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
 
