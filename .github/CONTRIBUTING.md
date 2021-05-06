@@ -26,13 +26,17 @@ You can [Report bug](https://github.com/PuneetGopinath/IRCbot/issues/new?templat
 
 ## Pull request
 
+If you have changes in the source code, make sure to run `pycodestyle src/ircbot.py` and solve errors in it.
+If you didn't install pycodestyle, just run `pip install pycodestyle`
+
 Steps to submit a pr:
 
 1. Fork the repo
 2. Clone it
 3. Edit
 4. Now commit
-5. Push and give us a pull request
+5. Push to your fork
+6. Submit a pull request
 
 ## Where can I contribute to IRCbot?
 

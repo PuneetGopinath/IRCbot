@@ -19,11 +19,14 @@ Format is `version (*dd-mm-yyyy*)`
 #### Changes
  * Move `ircbot.py` to `src/ircbot.py`
  * New irc channel `##bkircbot` instead of `##py3ircbot`
+ * Add new file `src/conf.py` for configuring bkircbot.
+ * Change function `main()` to `start()`
 
 #### Additions
  * Publish this project as package in pip with name `bkircbot`
  * New feature: join more than one channel, see [#4](https://github.com/PuneetGopinath/IRCbot/issues/4)
  * Add CodeQL analysis
+ * Add python docstrings for function
 
 #### Deletions
  * Remove `package.json`

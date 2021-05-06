@@ -6,7 +6,7 @@
   <blockquote><b>Quickly record irc messages</b></blockquote>
 
   <p align="center">
-    <b>IRCbot is a community-developed, free and open source library for recording irc messages in Python 3. It is a fork of https://github.com/Orderchaos/LinuxAcademy-IRC-Bot</b><br><br>
+    <b>BK IRCbot is a community-developed, free and open source library for recording irc messages in Python 3. It is a fork of https://github.com/Orderchaos/LinuxAcademy-IRC-Bot</b><br><br>
     It has a abbreviation BRT, full form is <b>B</b>aalKrshna I<b>R</b>C bo<b>t</b>.
     <br><br><br><br>
     Latest release: <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/PuneetGopinath/IRCbot"><br>
@@ -18,12 +18,14 @@
 </div>
 
 [![Join the chat at https://gitter.im/BaalKrshna/IRCbot](https://badges.gitter.im/BaalKrshna/IRCbot.svg)](https://gitter.im/BaalKrshna/IRCbot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![IRC](https://img.shields.io/badge/irc-%23bkircbot-brightgreen.svg)](https://webchat.freenode.net/?channels=bkircbot)
 
 ---------------------------------------------------------------------
 
 <details open="true">
     <summary align="center">Table of contents</summary>
 
+ * [Features](#features)
  * [Quick Start](#quick-start)
  * [Status](#status)
  * [Files](#files)
@@ -40,6 +42,12 @@
 </details>
 
 ---------------------------------------------------------------------
+
+<h2><a name="features">Features</a></h2>
+
+ * Join more than one channel, [#4](https://github.com/PuneetGopinath/IRCbot/issues/4)
+ * Quick installation
+ * Quickly config settings
 
 <h2><a name="quick-start">Quick Start 🚀</a></h2>
 
@@ -97,7 +105,8 @@ See Prerequisites section [in INSTALL.md](INSTALL.md#prerequisites).
 
 <h2><a name="tests">Tests ⚙️</a></h2>
 
-Run `python src/ircbot.py`
+Till now tests aren't created.
+Run `python src/ircbot.py` to start the ircbot.
 
 <h2><a name="contributing">Contributing</a></h2>
 

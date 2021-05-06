@@ -1,5 +1,8 @@
 # Common
 
+# Python cache
+src/__pycache__
+
 ## Log files
 *.err
 *.log
