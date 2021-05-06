@@ -1,6 +1,6 @@
 """
 Copyright (c) 2016 Linux Academy
-Copyright (c) 2021 Puneet Gopinath
+Copyright (c) 2021 BK IRCbot team and contributors
 
 Licensed under GNU Lesser General Public License v2.1
 See the LICENSE file distributed with the source code
