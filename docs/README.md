@@ -1,8 +1,8 @@
-<h2 align="center">IRCbot Docs - Home</h2>
+<h2 align="center">BK IRCbot Docs - Home</h2>
 
 <link rel="stylesheet" href="https://puneetgopinath.github.io/css/main.css" />
 
-Welcome to the documentation for IRCbot.
+Welcome to the documentation for BK IRCbot.
 
 ## Pages
 

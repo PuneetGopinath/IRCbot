@@ -1,4 +1,4 @@
-<h2 align="center">IRCbot Docs - FAQ</h2>
+<h2 align="center">BK IRCbot Docs - FAQ</h2>
 
 <link rel="stylesheet" href="https://puneetgopinath.github.io/css/main.css" />
 
