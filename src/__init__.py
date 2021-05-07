@@ -11,3 +11,5 @@ NOTE      This program is distributed in the hope that it will be useful - WITHO
            ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
            FITNESS FOR A PARTICULAR PURPOSE.
 """
+
+__version__ = "0.1.1.dev0"

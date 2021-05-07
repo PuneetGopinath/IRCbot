@@ -8,26 +8,39 @@ https://github.com/pypa/sampleproject
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 import pathlib
+import os
 
 here = pathlib.Path(__file__).parent.resolve()
 
 # Get the long description from the README file
 long_desc = (here / 'README.md').read_text(encoding='utf-8')
 
-# Arguments marked as "Required" below must be included for upload to PyPI.
-# Fields marked as "Optional" may be commented out.
+def read(rel_path):
+    # type: (str) -> str
+    here = os.path.abspath(os.path.dirname(__file__))
+    # intentionally *not* adding an encoding option to open, See:
+    #   https://github.com/pypa/virtualenv/issues/201#issuecomment-3145690
+    with open(os.path.join(here, rel_path)) as fp:
+        return fp.read()
+
+def get_version(rel_path):
+    # type: (str) -> str
+    for line in read(rel_path).splitlines():
+        if line.startswith("__version__"):
+            # __version__ = "0.9"
+            delim = '"' if '"' in line else "'"
+            return line.split(delim)[1]
+    raise RuntimeError("Unable to find version string.")
 
 setup(
-    # This is the name of your project. The first time you publish this
-    # package, this name will be registered for you. It will determine how
+    # This is the name of your project. It will determine how
     # users can install this project, e.g.:
     #
     # $ pip install sampleproject
     #
     # And where it will live on PyPI: https://pypi.org/project/sampleproject/
     #
-    # There are some restrictions on what makes a valid project name
-    # specification here:
+    # There are some restrictions on what makes a valid project name specification here:
     # https://packaging.python.org/specifications/core-metadata/#name
     name='bkircbot',  # Required
 
@@ -37,7 +50,7 @@ setup(
     # For a discussion on single-sourcing the version across setup.py and the
     # project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.1.0',  # Required
+    version=get_version("src/__init__.py"),  # Required
 
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
@@ -74,7 +87,7 @@ setup(
 
     # This should be your name or the name of the organization which owns the
     # project.
-    author='Linux Academy, Puneet Gopinath',  # Optional
+    author='Linux Academy, Baal Krshna',  # Optional
 
     # This should be a valid email address corresponding to the author listed
     # above.
@@ -93,10 +106,10 @@ setup(
 
         # Indicate who your project is intended for
         'Intended Audience :: Developers',
-        'Topic :: Software Development :: Build Tools',
+        'Topic :: Communications :: Chat :: Internet Relay Chat',
 
         # Pick your license as you wish
-        'License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2.1)',
+        'License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)',
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate you support Python 3. These classifiers are *not*

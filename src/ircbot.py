@@ -19,7 +19,7 @@ import socket
 # import os
 
 # conf
-from conf import *
+from conf import server, port, channel, botnick, adminnick, password, exitcode, filename
 
 # Create a socket
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

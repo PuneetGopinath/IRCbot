@@ -13,7 +13,7 @@ NOTE      This program is distributed in the hope that it will be useful - WITHO
 """
 
 server = "chat.freenode.net"  # Server to connect.
-port = 6667 # Port to use when connecting
+port = 6667  # Port to use when connecting
 channel = ["#chan"]  # Array of channels to join.
 botnick = ""  # Your bot's nickname.
 adminnick = ""  # Your IRC nickname.
