@@ -15,6 +15,7 @@ here = pathlib.Path(__file__).parent.resolve()
 # Get the long description from the README file
 long_desc = (here / 'README.md').read_text(encoding='utf-8')
 
+
 def read(rel_path):
     # type: (str) -> str
     here = os.path.abspath(os.path.dirname(__file__))
@@ -22,6 +23,7 @@ def read(rel_path):
     #   https://github.com/pypa/virtualenv/issues/201#issuecomment-3145690
     with open(os.path.join(here, rel_path)) as fp:
         return fp.read()
+
 
 def get_version(rel_path):
     # type: (str) -> str
@@ -47,15 +49,13 @@ setup(
     # Versions should comply with PEP 440:
     # https://www.python.org/dev/peps/pep-0440/
     #
-    # For a discussion on single-sourcing the version across setup.py and the
-    # project code, see
+    # For a discussion on single-sourcing the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version=get_version("src/__init__.py"),  # Required
+    version=get_version("bkircbot/__init__.py"),  # Required
 
-    # This is a one-line description or tagline of what your project does. This
-    # corresponds to the "Summary" metadata field:
+    # This is a one-line description or tagline of what your project does.
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description='IRCbot is a community-developed, free and open source library for recording irc messages in Python 3. It is forked from https://github.com/Orderchaos/LinuxAcademy-IRC-Bot',  # Optional
+    description='BK IRCbot is a community-developed, free and open source library for recording irc messages in Python 3. It is a fork of https://github.com/Orderchaos/LinuxAcademy-IRC-Bot',  # Optional
 
     # This is an optional longer description of your project that represents
     # the body of text which users will see when they visit PyPI.
@@ -91,7 +91,7 @@ setup(
 
     # This should be a valid email address corresponding to the author listed
     # above.
-    author_email='baalkrshna@gmail.com',  # Optional
+    #author_email='baalkrshna@gmail.com',  # Optional
 
     # Classifiers help users find your project by categorizing it.
     #
@@ -131,7 +131,7 @@ setup(
 
     # When your source code is in a subdirectory under the project root, e.g.
     # `src/`, it is necessary to specify the `package_dir` argument.
-    package_dir={'': 'src'},  # Optional
+    package_dir={'': 'bkircbot'},  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
@@ -142,7 +142,7 @@ setup(
     #
     #   py_modules=["my_module"],
     #
-    packages=find_packages(where='src'),  # Required
+    packages=find_packages(where='bkircbot'),  # Required
 
     # Specify which Python versions you support. In contrast to the
     # 'Programming Language' classifiers above, 'pip install' will check this
@@ -166,16 +166,15 @@ setup(
     #
     # Similar to `install_requires` above, these must be valid existing
     # projects.
-    #extras_require={  # Optional
-    #    'dev': ['check-manifest'],
-    #    'test': ['coverage'],
-    #},
+    extras_require={  # Optional
+        'dev': ['pycodestyle'],
+    },
 
     # If there are data files included in your packages that need to be
     # installed, specify them here.
-    #package_data={  # Optional
-    #    'sample': ['package_data.dat'],
-    #},
+    package_data={  # Optional
+        '': ['LICENSE'],
+    },
 
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
@@ -207,9 +206,7 @@ setup(
     # maintainers, and where to support the project financially. The key is
     # what's used to render the link text on PyPI.
     project_urls={  # Optional
-        'Bug Reports': 'https://github.com/pypa/sampleproject/issues',
-        'Funding': 'https://donate.pypi.org',
-        'Say Thanks!': 'http://saythanks.io/to/example',
-        'Source': 'https://github.com/pypa/sampleproject/',
+        'Bug Reports': 'https://github.com/PuneetGopinath/IRCbot/issues',
+        'Source': 'https://github.com/PuneetGopinath/IRCbot/',
     },
 )

@@ -6,7 +6,7 @@ Get started with IRCbot, the library for logging messages sent to specific irc c
 
 ## Introduction
 
-IRCbot is a bot written in Python 3, for logging messages sent to specific irc channel.
+IRCbot is a bot written in Python(3), for logging messages sent to specific irc channel.
 
 ## Installation
 
@@ -14,7 +14,7 @@ Installation guide can be read in [INSTALL.md](https://github.com/PuneetGopinath
 
 ## Start IRCbot
 
-Run `python src/ircbot.py`
+Run `python bkircbot/ircbot.py`
 
 Plz read [SUPPORT.md](https://github.com/PuneetGopinath/IRCbot/blob/main/.github/SUPPORT.md) if you want to ask questions or clarify doubts.
 

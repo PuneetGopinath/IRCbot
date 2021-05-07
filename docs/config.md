@@ -52,7 +52,7 @@ By default if you send `Stop botnick`, where botnick is nick specified in config
 
 ---------------------------------------------------------------------
 
-You have to edit these config settings after opening `src/conf.py`
+You have to edit these config settings after opening `bkircbot/conf.py`
 
 ---------------------------------------------------------------------
 

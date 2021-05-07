@@ -61,22 +61,22 @@
 
 - ### Installation 🔧
 
-Please read [INSTALL.md](INSTALL.md) file for The installation guide.
+Please read [INSTALL.md](https://github.com/PuneetGopinath/IRCbot/blob/main/INSTALL.md) file for The installation guide.
 
 - ### Documentation
 
-Please see [docs](docs/README.md) folder.
+Please see [docs](https://github.com/PuneetGopinath/IRCbot/tree/main/docs) folder.
 
 - ### Example
 
 Just run:
 
-    python src/ircbot.py
-in the command line. After [configuring IRCbot](docs/config.md)
+    python bkircbot/ircbot.py
+in the command line. After [configuring IRCbot](https://github.com/PuneetGopinath/IRCbot/blob/main/docs/config.md)
 
 <h2><a name="status">Status</a></h2>
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](.github/CODE_OF_CONDUCT.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](https://github.com/PuneetGopinath/IRCbot/blob/main/.github/CODE_OF_CONDUCT.md)
 [![Join the chat at https://gitter.im/BaalKrshna/IRCbot](https://badges.gitter.im/BaalKrshna/IRCbot.svg)](https://gitter.im/BaalKrshna/IRCbot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 #### GitHub
@@ -94,9 +94,10 @@ in the command line. After [configuring IRCbot](docs/config.md)
 
 ```text
 IRCbot/
-└── src/
+└── bkircbot/
     └── __init__.py
     └── ircbot.py
+    └── conf.py
 ```
 
 <h2><a name="prerequisites">Prerequisites 📋</a></h2>
@@ -106,11 +107,11 @@ See Prerequisites section [in INSTALL.md](INSTALL.md#prerequisites).
 <h2><a name="tests">Tests ⚙️</a></h2>
 
 Till now tests aren't created.
-Run `python src/ircbot.py` to start the ircbot.
+Run `python bkircbot/ircbot.py` to start the irc bot.
 
 <h2><a name="contributing">Contributing</a></h2>
 
-Plz read [CONTRIBUTING.md](.github/CONTRIBUTING.md)</a> file.
+Plz read [CONTRIBUTING.md](https://github.com/PuneetGopinath/IRCbot/blob/main/.github/CONTRIBUTING.md)</a> file.
 
 <h2><a name="community">Community 💬</a></h2>
 

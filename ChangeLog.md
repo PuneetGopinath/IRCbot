@@ -1,6 +1,6 @@
-# IRCbot ChangeLog 0.2
+# BK IRCbot ChangeLog 0.2
 
-All notable changes to IRCbot library will be added to this file.
+All notable changes to BK IRCbot library will be added to this file.
 
 [Older ChangeLogs](#older-changelogs)
 
@@ -17,16 +17,16 @@ Format is `version (*dd-mm-yyyy*)`
  * No bug fixes
 
 #### Changes
- * Move `ircbot.py` to `src/ircbot.py`
+ * Move `ircbot.py` to `bkircbot/ircbot.py`
  * New irc channel `##bkircbot` instead of `##py3ircbot`
- * Add new file `src/conf.py` for configuring bkircbot.
+ * Add new file `bkircbot/conf.py` for configuring `bkircbot`.
  * Change function `main()` to `start()`
 
 #### Additions
- * Publish this project as package in pip with name `bkircbot`
+ * Add config files for publishing this project as package in pip with name `bkircbot`
  * New feature: join more than one channel, see [#4](https://github.com/PuneetGopinath/IRCbot/issues/4)
- * Add CodeQL analysis
- * Add python docstrings for function
+ * Add `CodeQL` analysis
+ * Add docstrings
 
 #### Deletions
  * Remove `package.json`
