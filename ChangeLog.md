@@ -25,7 +25,6 @@ Format is `version (*dd-mm-yyyy*)`
 #### Additions
  * Add config files for publishing this project as package in pip with name `bkircbot`
  * New feature: join more than one channel, see [#4](https://github.com/PuneetGopinath/IRCbot/issues/4)
- * Add `CodeQL` analysis
  * Add docstrings
 
 #### Deletions

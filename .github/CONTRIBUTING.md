@@ -26,8 +26,8 @@ You can [Report bug](https://github.com/PuneetGopinath/IRCbot/issues/new?templat
 
 ## Pull request
 
-If you have changes in the source code, make sure to run `pycodestyle src/ircbot.py` and solve errors in it.
-If you didn't install pycodestyle, just run `pip install pycodestyle`
+If you have changes in the source code, make sure to run `pycodestyle bkircbot/ircbot.py` and solve errors in it.
+If you did not already install `pycodestyle`, just run `pip install pycodestyle`
 
 Steps to submit a pr:
 
