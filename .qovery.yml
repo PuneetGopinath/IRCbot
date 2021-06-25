@@ -1,0 +1,11 @@
+---
+application:
+  name: "ircbot"
+  project: "Welcome-Bot"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-ircbot"
+  routes:
+  - application_name: "ircbot"
+    paths:
+    - "/*"
