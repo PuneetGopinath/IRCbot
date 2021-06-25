@@ -22,9 +22,3 @@ adminnick = ""  # Your IRC nickname.
 password = ""  # Your IRC bot's password.
 exitcode = "Stop " + botnick  # The message we will use to stop the bot if sent by admin.
 filename = "ircchat.log"  # Filename in which messages will be logged.
-if os.environ["botnick"]
-    botnick = os.environ["botnick"]
-if os.environ["nick"]
-    adminnick = os.environ["nick"]
-if os.environ["pass"]
-    password = os.environ["pass"]

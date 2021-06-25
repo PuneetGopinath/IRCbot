@@ -94,7 +94,7 @@ with socketcontext(socket.AF_INET, socket.SOCK_STREAM) as ircsock:
         Returns:
         null: Returns null.
         """
-        ircsock.send(bytes("PONG :pingis\n", "UTF-8"))
+        ircsock.send(("PONG :pingis\n").encode("UTF-8"))
 
     def sendmsg(msg, target):
         """Send a message to a channel or some nick
@@ -108,7 +108,7 @@ with socketcontext(socket.AF_INET, socket.SOCK_STREAM) as ircsock:
         """
         # Here we are sending a PRIVMSG to the server.
         # The " :" lets the server separate the target and the message.
-        ircsock.send(bytes("PRIVMSG " + target + " :" + msg + "\n", "UTF-8"))
+        ircsock.send(("PRIVMSG " + target + " :" + msg + "\n").encode("UTF-8"))
 
     def logger(name, msg):
         """Log message
@@ -201,7 +201,7 @@ with socketcontext(socket.AF_INET, socket.SOCK_STREAM) as ircsock:
                             sendTo
                         )
                         # Send the quit command to the IRC server so it knows we’re leaving.
-                        ircsock.send(bytes("QUIT \n", "UTF-8"))
+                        ircsock.send(("QUIT \n").encode("UTF-8"))
                         # The return command ends the function here
                         # So the bot stops
                         return
